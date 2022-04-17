@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class BOJ_10430 {
     public static void main(String[] args) throws Exception {
+        // 문제 URL : https://www.acmicpc.net/problem/10430
+        
         Scanner sc = new Scanner(System.in);
         String[] reqStrArr = sc.nextLine().split(" ");
 
