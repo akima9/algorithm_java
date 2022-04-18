@@ -16,7 +16,7 @@ public class BOJ_4375 {
                 tempNum += (long)Math.pow(10, i);
                 cnt++;
             }
-            System.out.println(cnt);
+            System.out.println(cnt);   
         }
     }
 }
