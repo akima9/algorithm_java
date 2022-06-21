@@ -13,19 +13,23 @@ public class BOJ_10804 {
             int start = a - 1;
             int startIndex = a - 1;
             int end = b -1 ;
+            int endIndex = b -1 ;
             int temp = 0;
             int cnt = 0;
-            while (startIndex <= end) {
+            while (startIndex <= endIndex) {
                 temp = card[start + cnt];
                 card[start + cnt] = card[end - cnt];
                 card[end - cnt] = temp;
                 cnt++;
                 startIndex++;
+                endIndex--;
             }//end while
         }//end for
 
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < card.length; i++) {
-            System.out.println(card[i]);
+            sb.append(card[i]).append(" ");
         }
+        System.out.println(sb);
     }
 }
