@@ -7,16 +7,34 @@ public class BOJ_1475 {
         String N = br.readLine();
         String[] splitN = N.split("");
         int[] num = new int[10];
-        for (int i = 0; i < splitN.length; i++) {
-            splitN[i] += 1;
-        }
         int max = 0;
+        
+        for (int i = 0; i < splitN.length; i++) {
+            int index = Integer.parseInt(splitN[i]);
+            if (index == 6) {
+                if (num[index] > num[9]) {
+                    num[9] += 1;
+                } else {
+                    num[index] += 1;
+                }
+            } else if (index == 9) {
+                if (num[index] > num[6]) {
+                    num[6] += 1;
+                } else {
+                    num[index] += 1;
+                }
+            } else {
+                num[index] += 1;
+            }
+        }
+
         for (int i = 0; i < num.length; i++) {
-            max = Math.max(num[i], max);
+            if (max < num[i]) {
+                max = num[i];
+            }
         }
-        if (num[6-1] ) {
-            
-        }
+
+        System.out.println(max);
 
     }
 }
